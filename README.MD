@@ -1,4 +1,4 @@
-# Simply Angular Watcher Application
+# Simply Angular Wheater Watcher Application
 
 ## Sobre o projeto
 
