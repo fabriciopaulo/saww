@@ -15,7 +15,9 @@ Para executar o projeto é necessário:
 
 Para executar a aplicação siga os passos:
 1. Após fazer o clone do projeto (se baixar zipado descompacte-o);
+
 2. Vá até a pasta raiz do projeto;
+
 3. Abra uma janela do terminal/cmd e execute o comando "gulp" sem as áspas, o webserver será iniciado e a aplicação estará funcionando;
 
 ## Foram utilizados e são dependências deste projeto:
@@ -29,4 +31,5 @@ Para executar a aplicação siga os passos:
 ## Créditos
 (C) 2016 - Fabrício Paulo
 fabricio@fabriciopaulo.com
+
 http://www.fabriciopaulo.com/projetos
