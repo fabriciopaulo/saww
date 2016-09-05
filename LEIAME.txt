@@ -1,0 +1,31 @@
+=============================================================
+PEQUENO PROJETO EM ANGULAR COM CONSUMO DE WEBAPI
+=============================================================
+
+ - É necessário ter instalado na máquina o NODE.JS com NPM;
+ - É necessário ter o Gulp instalado, se não tiver poderá
+   utilizar o comando 'npm install -g gulp'
+ - A aplicação usa o Gulp como Webserver local;
+ - O Gulp utiliza o livereload então certifique-se que a 
+   porta utilizada (8000) não esteja ocupada por outra 
+   aplicação.
+
+ Para executar a aplicação:
+
+ - Esta pasta é o root do projeto, nela, abra uma janela do 
+   terminal/cmd e execute o comando "gulp" sem as áspas, o 
+   webserver será iniciado e a aplicação estará funcionando;
+
+-------------------------------------------------------------
+Foram utilizados e são dependências deste projeto:
+
+	- AngularJS
+	- Restangular
+	- Lodash
+	- MomentJS
+	- JQuery
+	- Bootstrap
+
+=============================================================
+/////////////////////////////////////////////////////////////
+============================================================= 

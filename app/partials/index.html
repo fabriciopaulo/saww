@@ -1,0 +1,103 @@
+<div class="content">
+  <div class="form">
+    <span class="form-title">
+      Buscar Cidade
+    </span>
+    <br/>
+    <input type="text" ng-model="index.city" id="inputCity"></input>
+    <button ng-click="index.buscarCidade()"></button>
+  </div>
+
+  <div class="refresh" ng-click="index.buscarCidade()">
+    <img ng-src="img/btn-refresh.png" alt="icon" />    
+  </div>
+
+  <div class="content-message" ng-if="index.notFound">
+    Erro 
+    <br/><hr/><br/>
+    Cidade não localizada!
+  </div>
+
+  <div ng-if="index.notFound != true && index.start != true">
+    <div class="today">
+      <span class="today-title">
+        Hoje
+      </span>
+      <br/>
+      <span class="today-item">
+        {{index.content.city.name}} {{index.content.city.country}}
+      </span>
+      <br/>
+      <br/>
+      <span class="today-temperature" ng-if="(index.content.first.main.temp_max)">
+        {{ (index.content.first.main.temp_max - 273).toFixed(1) }}º
+      </span>
+      <br/>
+      <br/>
+      <span class="today-item">
+        Humidade
+      </span>
+      <br/>
+      <span class="today-item">
+        {{index.content.first.main.humidity}}%
+      </span>
+      <br/>
+      <br/>
+      <span class="today-item">
+        Vento
+      </span>
+      <br/>
+      <span class="today-item">
+        {{
+          (index.content.first.wind.deg < 45) ? 'Norte' :
+          (index.content.first.wind.deg >= 45 && index.content.first.wind.deg < 90 ) ? 'Nordeste' :
+          (index.content.first.wind.deg >= 90 && index.content.first.wind.deg < 135 ) ? 'Leste' :
+          (index.content.first.wind.deg >= 135 && index.content.first.wind.deg < 180 ) ? 'Sudeste' :
+          (index.content.first.wind.deg >= 180 && index.content.first.wind.deg < 225 ) ? 'Sul' :
+          (index.content.first.wind.deg >= 225 && index.content.first.wind.deg < 270 ) ? 'Sudoeste' :
+          (index.content.first.wind.deg >= 270 && index.content.first.wind.deg < 315 ) ? 'Oeste' :
+          (index.content.first.wind.deg >= 315 && index.content.first.wind.deg < 360 ) ? 'Noroeste' :
+          (index.content.first.wind.deg >= 360) ? 'Norte' :
+          ''
+        }}
+        {{(index.content.first) ? (index.content.first.wind.speed * 360).toString().substring(0,2)+' Km/h' : ''}}
+      </span>
+    </div>
+
+    <div class="another-day" ng-repeat="dia in index.content.days">
+      <span class="another-day-day">
+        {{dia.dt_ext}}
+      </span>
+      <br/>
+      <br/>
+      <img ng-src="img/icons/{{dia.weather[0].main}}.png" alt="icon" />
+      <br/>
+      <br/>
+      <span class="another-day-item">
+        Temp. mínima
+      </span>
+      <br/>
+      <span class="another-day-item">
+        {{ (dia.main.temp_min - 273).toFixed(1) }} ºC
+      </span>
+      <br/>
+      <br/>
+      <span class="another-day-item">
+        Temp. máxima
+      </span>
+      <br/>
+      <span class="another-day-item">
+        {{ (dia.main.temp_max - 273).toFixed(1) }} ºC
+      </span>
+      <br/>
+      <br/>
+      <span class="another-day-item">
+        Condição
+      </span>
+      <br/>
+      <span class="another-day-item">
+        {{dia.weather[0].main}}
+      </span>
+    </div>
+  </div>
+</div>

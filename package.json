@@ -1,0 +1,16 @@
+{
+  "name": "SimplyAngularWeather",
+  "version": "1.0.0",
+  "description": "A single angular weather watcher application",
+  "main": "app/",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-webserver": "^0.9.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Fabricio Paulo",
+  "license": "ISC"
+}
